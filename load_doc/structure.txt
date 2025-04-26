@@ -1,0 +1,31 @@
+load_doc/
+├── src/
+│   ├── __init__.py
+│   ├── data_processor/       # 数据处理核心模块
+│   │   ├── data_loader.py    # 数据加载（CSV/Excel/数据库）
+│   │   ├── data_cleaner.py   # 数据清洗（缺失值/异常值处理）
+│   │   └── data_transformer.py  # 数据转换（标准化/特征工程）
+│   ├── analysis/             # 统计分析模块
+│   │   ├── descriptive_stats.py  # 描述性统计
+│   │   ├── hypothesis_test.py    # 假设检验
+│   │   └── correlation_analysis.py  # 相关性分析
+│   └── visualization/        # 可视化模块
+│       ├── plot_factory.py   # 图表工厂（统一接口）
+│       └── styles/           # 可视化样式配置
+├── tests/
+│   ├── test_data_processor.py
+│   ├── test_analysis.py
+│   └── test_visualization.py
+├── docs/
+│   ├── user_guide.md         # 用户手册
+│   ├── api_reference.md      # API网页
+│   └── architecture.md       # 架构设计说明
+├── config/
+│   ├── config.yaml           # 主配置文件
+│   └── database.ini          # 数据库连接配置
+├── data/
+│   ├── raw/                # 原始数据
+│   └── processed/          # 处理后的数据
+├── requirements.txt
+├── setup.py
+└── README.md

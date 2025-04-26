@@ -1,0 +1,108 @@
+# 数据处理与分析工具包配置文件
+
+# 数据加载配置
+data_loader:
+  # 默认编码
+  default_encoding: 'utf-8'
+  
+  # CSV文件默认分隔符
+  csv_separator: ','
+  
+  # Excel文件默认工作表
+  excel_sheet: 0
+  
+  # 被视为缺失值的字符串列表
+  missing_values: ['NA', 'N/A', '', 'null', 'NULL', 'NaN', 'None']
+  
+  # 数据库连接超时（秒）
+  db_timeout: 30
+
+# 数据清洗配置
+data_cleaner:
+  # 默认缺失值处理策略
+  missing_strategy: 'fill'
+  
+  # 异常值处理
+  outliers:
+    # 默认检测方法
+    detection_method: 'iqr'
+    
+    # 默认阈值
+    iqr_threshold: 1.5
+    zscore_threshold: 3.0
+    
+    # 是否自动删除异常值
+    auto_remove: false
+
+# 数据转换配置
+data_transformer:
+  # 默认标准化方法
+  normalization_method: 'z-score'
+  
+  # 默认分类变量编码方法
+  categorical_encoding: 'one-hot'
+  
+  # 是否在one-hot编码中删除第一列
+  drop_first: false
+  
+  # 降维默认组件数
+  pca_components: 2
+
+# 分析配置
+analysis:
+  # 假设检验默认显著性水平
+  alpha: 0.05
+  
+  # 相关性分析默认方法
+  correlation_method: 'pearson'
+  
+  # 正态性检验默认方法
+  normality_test: 'shapiro'
+
+# 可视化配置
+visualization:
+  # 默认图表样式
+  style: 'seaborn'
+  
+  # 默认调色板
+  palette: 'viridis'
+  
+  # 默认图表大小
+  figsize: [10, 6]
+  
+  # 默认DPI
+  dpi: 100
+  
+  # 图表保存格式
+  export_formats: ['png', 'pdf']
+  
+  # 图表保存目录
+  output_dir: 'outputs/plots'
+
+# 文件路径配置
+paths:
+  # 原始数据目录
+  raw_data: 'data/raw'
+  
+  # 处理后数据目录
+  processed_data: 'data/processed'
+  
+  # 输出目录
+  output: 'outputs'
+  
+  # 日志目录
+  logs: 'logs'
+
+# 日志配置
+logging:
+  # 日志级别
+  level: 'INFO'
+  
+  # 日志文件名
+  filename: 'data_analysis.log'
+  
+  # 日志格式
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  
+  # 是否同时输出到控制台
+  console: true 

@@ -1,0 +1,6 @@
+code --install-extension github.vscode-pull-request-github
+
+git config --global user.name "wangbo-happy"
+git config --global user.email "892454594@qq.com"
+
+gh repo create your-repo --public --description "load_doc"
